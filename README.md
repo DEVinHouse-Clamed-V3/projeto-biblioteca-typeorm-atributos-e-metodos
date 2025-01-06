@@ -135,17 +135,17 @@ Este projeto tem como objetivo desenvolver um sistema para gerenciar os diferent
 - **Método**: `GET`
 - **Endpoint**: `/autores:id`
 - **Resposta**:
-  
-      {
-		    "id": 1,
-        "name": "Gabriel Garcia Marquez",
-		    "birthDate": "1927-03-06T03:00:00.000Z",
-		    "biography": "Gabriel García Márquez foi um escritor colombiano, conhecido por suas obras de realismo          mágico, como 'Cem Anos de Solidão'.",
-		    "nationality": "Indefinida",
-		    "active": true,
-		    "createdAt": "2025-01-06T03:51:21.282Z",
-		    "updatedAt": "2025-01-06T03:51:21.282Z"
-	    },
+
+		{
+  		  "id": 1,
+  		  "name": "Gabriel Garcia Marquez",
+		  "birthDate": "1927-03-06T03:00:00.000Z",
+		  "biography": "Gabriel García Márquez foi um escritor colombiano, conhecido por suas obras de realismo mágico, como 'Cem Anos de Solidão'.",
+		  "nationality": "Indefinida",
+		  "active": true,
+		  "createdAt": "2025-01-06T03:51:21.282Z",
+		  "updatedAt": "2025-01-06T03:51:21.282Z"
+	    	},
   
 ### 4.4 Atualizar um Autor
 
@@ -239,10 +239,3 @@ Este projeto tem como objetivo desenvolver um sistema para gerenciar os diferent
   - Gustavo Melo Coelho:
 
         -
-
-    
-
-    
-    
-    
-    https://drive.google.com/file/d/1Wh2Vz6ZB5F6NObWbEpnUzRcYLanPbV3I/view?usp=drive_link
