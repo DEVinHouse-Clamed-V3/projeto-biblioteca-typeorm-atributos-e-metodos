@@ -5,11 +5,9 @@ import Auditorio from '../entities/Auditorio';
 const auditorioRoutes = Router();
 const auditoriosRepository = AppDataSource.getRepository(Auditorio)
 
-/* Implemente aqui os métodos que irão atender as requisições HTTP. */
-
 auditorioRoutes.get('/', async (request, response) => {
     try{
-        const auditorios = await auditoriosRepository.find() //select * from auditorios
+        const auditorios = await auditoriosRepository.find()
         response.json(auditorios)
     }
     catch(error){
@@ -33,37 +31,34 @@ auditorioRoutes.get('/:id', async (request, response) => {
     }
 })
 
-//Rota de criar um novo auditório
-
 auditorioRoutes.post('/', async (request, response) => {
-    const body = request.body //recebe o body
+    const body = request.body
 
     try{
-        if(!body.nome){
+        if(!body.name){
             response.status(400).json({error: 'O campo nome é obrigatório'})
         } else if (!body.capacity){
             response.status(400).json({error: 'O campo capacidade é obrigatório'})
         } else if (!body.location){
             response.status(400).json({error: 'O campo local é obrigatório'})
-        } else if (!body.has_projector){
+        } else if (body.has_projector === ''){
             response.status(400).json({error: 'É obrigatório informar se possui projetor'})
-        } else if (!body.has_sound_system){
+        } else if (body.has_sound_system === ''){
             response.status(400).json({error: 'É obrigatório informar se posssui equipamento de som'})
         } else {
-            const auditorio = new Auditorio() //cria uma nova instância
+            const auditorio = new Auditorio()
     
-        //atribui os valores do body para o auditorio
-        auditorio.name = body.name
-        auditorio.capacity = body.capacity
-        auditorio.location = body.location
-        auditorio.has_projector = body.has_projector
-        auditorio.has_sound_system = body.has_sound_system
-        auditorio.created_at = body.created_at
-        auditorio.updated_at = body.updated_at
+            auditorio.name = body.name
+            auditorio.capacity = body.capacity
+            auditorio.location = body.location
+            auditorio.has_projector = body.has_projector
+            auditorio.has_sound_system = body.has_sound_system
+            auditorio.created_at = body.created_at
+            auditorio.updated_at = body.updated_at
     
-        const auditorioCreated = await auditoriosRepository.save(auditorio) //.save é o insert into do BD
+            const auditorioCreated = await auditoriosRepository.save(auditorio)
     
-        response.status(201).json(auditorioCreated)
+            response.status(201).json(auditorioCreated)
         }
     }
 
@@ -72,7 +67,6 @@ auditorioRoutes.post('/', async (request, response) => {
         response.status(500).json({error: 'Erro ao cadastrar auditório'})
     }
 })
-//Rota de atualizar um auditório
 
 auditorioRoutes.put('/:id', async (request, response) => {
     try{
@@ -100,12 +94,10 @@ auditorioRoutes.put('/:id', async (request, response) => {
     }
 })
 
-//Rota de deletar um auditório
-
 auditorioRoutes.delete('/:id', async (request, response) => {
     try{
         const id = Number(request.params.id)
-        const productDeleted =  await auditoriosRepository.delete(id) //Delete from products where id = ?
+        const productDeleted =  await auditoriosRepository.delete(id)
         
         if(productDeleted.affected === 0){
             response.status(404).json({error: 'Auditório não localizado, nada foi deletado.'})
