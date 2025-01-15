@@ -16,11 +16,23 @@
       "express": "^4.18.2",
       "express-async-errors": "^3.1.1",
       "pg": "^8.13.1",
-      "reflect-metadata": "^0.1.13",
-      "typeorm": "0.3.11"
+      "reflect-metadata": "^0.1.14",
+      "typeorm": "^0.3.11"
    },
    "scripts": {
       "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
       "migration:run": "typeorm-ts-node-commonjs -d ./src/database/data-source.ts migration:run"
-   }
+   },
+   "main": "index.js",
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/DEVinHouse-Clamed-V3/projeto-biblioteca-typeorm-atributos-e-metodos.git"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/DEVinHouse-Clamed-V3/projeto-biblioteca-typeorm-atributos-e-metodos/issues"
+   },
+   "homepage": "https://github.com/DEVinHouse-Clamed-V3/projeto-biblioteca-typeorm-atributos-e-metodos#readme"
 }
