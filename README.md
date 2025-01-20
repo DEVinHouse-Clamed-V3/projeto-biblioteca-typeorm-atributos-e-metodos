@@ -252,7 +252,7 @@ Este projeto tem como objetivo desenvolver um sistema para gerenciar os diferent
     
   - Lucas Benkendorf:
 
-        -
+        https://drive.google.com/file/d/1E3of1oX9lUJYytI1zAcsa1o17gOMyc9y/view?usp=sharing		
     
   - Gustavo Melo Coelho:
 
