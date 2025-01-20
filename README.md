@@ -198,11 +198,11 @@ Este projeto tem como objetivo desenvolver um sistema para gerenciar os diferent
 
   ### 4.2 Auditório
 
-  ### 4.2.1 Criar um Autor
-  ### 4.2.2 Listar Autores
-  ### 4.2.3 Listar Autores por ID
-  ### 4.2.4 Atualizar um Auto
-  ### 4.2.5 Deletar um Autor
+  ### 4.2.1 Criar um Auditório
+  ### 4.2.2 Listar Auditórios
+  ### 4.2.3 Listar Auditório por ID
+  ### 4.2.4 Atualizar um Auditório
+  ### 4.2.5 Deletar um Auditório
 
 ---
 
