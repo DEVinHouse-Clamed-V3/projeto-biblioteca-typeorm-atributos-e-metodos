@@ -346,6 +346,6 @@ Este projeto tem como objetivo desenvolver um sistema para gerenciar os diferent
         https://drive.google.com/file/d/1E3of1oX9lUJYytI1zAcsa1o17gOMyc9y/view?usp=sharing		
     
   - Gustavo Melo Coelho:
-    	https://drive.google.com/drive/u/0/folders/1tt-RZaRuS2voz41bFbiJNJd9TFS2WYJI
+    	`https://drive.google.com/drive/u/0/folders/1tt-RZaRuS2voz41bFbiJNJd9TFS2WYJI`
 
-        -
+        
