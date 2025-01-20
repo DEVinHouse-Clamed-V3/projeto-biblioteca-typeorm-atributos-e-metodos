@@ -9,14 +9,21 @@
    - [Executar as migrations](#32-executar-as-migrations)
    - [Iniciar a aplicação e testar funcionalidades](#33-iniciar-a-aplicação-e-testar-funcionalidades)
 4. [Rotas da API](#4-rotas-da-api)
-   - [Criar um Autor](#41-criar-um-autor)
-   - [Listar Autores](#42-listar-autores)
-   - [Listar Autores por ID](#43-listar-autores-por-id)
-   - [Atualizar um Autor](#44-atualizar-um-autor)
-   - [Deletar um Autor](#45-deletar-um-autor)
-5. [Estrutura do Projeto](#5-estrutura-do-projeto)
-6. [Contribuições e Melhorias Futuras](#6-contribuições-e-melhorias-futuras)
-7. [Vídeos do projeto](#7-vídeo-do-projeto)
+   - [Autor](#41-autor)
+   - [Criar um Autor](#411-criar-um-autor)
+   - [Listar Autores](#412-listar-autores)
+   - [Listar Autores por ID](#413-listar-autores-por-id)
+   - [Atualizar um Autor](#414-atualizar-um-autor)
+   - [Deletar um Autor](#415-deletar-um-autor)
+   - [Auditório](#42-Auditório)
+   - [Criar um Auditório](#421-criar-um-auditorio)
+   - [Listar Auditórios](#422-listar-auditorio)
+   - [Listar Auditórios por ID](#423-listar-auditorio-por-id)
+   - [Atualizar um Auditório](#424-atualizar-um-auditorio)
+   - [Deletar um Auditório](#425-deletar-um-auditorio)
+6. [Estrutura do Projeto](#5-estrutura-do-projeto)
+7. [Contribuições e Melhorias Futuras](#6-contribuições-e-melhorias-futuras)
+8. [Vídeos do projeto](#7-vídeo-do-projeto)
    
 ---
 
@@ -73,7 +80,9 @@ Este projeto tem como objetivo desenvolver um sistema para gerenciar os diferent
 
 ## 4. **Rotas da API**
 
-### 4.1. Criar um Autor
+### 4.1 Autor
+
+### 4.1.1 Criar um Autor
 
 - **Método**: `POST`
 - **Endpoint**: `/autores`
@@ -101,7 +110,7 @@ Este projeto tem como objetivo desenvolver um sistema para gerenciar os diferent
 	    	  "id": 1
 	      }
       }
-### 4.2 Listar Autores
+### 4.1.2 Listar Autores
 
 - **Método**: `GET`
 - **Endpoint**: `/autores`
@@ -130,7 +139,7 @@ Este projeto tem como objetivo desenvolver um sistema para gerenciar os diferent
 	      }
       ]
   
- ### 4.3 Listar Autores por ID
+ ### 4.1.3 Listar Autores por ID
 
 - **Método**: `GET`
 - **Endpoint**: `/autores:id`
@@ -147,7 +156,7 @@ Este projeto tem como objetivo desenvolver um sistema para gerenciar os diferent
 		  "updatedAt": "2025-01-06T03:51:21.282Z"
 	    	},
   
-### 4.4 Atualizar um Autor
+### 4.1.4 Atualizar um Autor
 
 - **Método**: `PUT`
 - **Endpoint**: `/autores:id`
@@ -177,7 +186,7 @@ Este projeto tem como objetivo desenvolver um sistema para gerenciar os diferent
       	}
       }
 
-### 4.5 Deletar um Autor
+### 4.1.5 Deletar um Autor
 
 - **Método**: `DELETE`
 - **Endpoint**: `/autores:id`
@@ -187,6 +196,15 @@ Este projeto tem como objetivo desenvolver um sistema para gerenciar os diferent
 	      "message": "Autor excluído com sucesso"
       }
 
+  ### 4.2 Auditório
+
+  ### 4.2.1 Criar um Autor
+  ### 4.2.2 Listar Autores
+  ### 4.2.3 Listar Autores por ID
+  ### 4.2.4 Atualizar um Auto
+  ### 4.2.5 Deletar um Autor
+
+---
 
 ## 5. Estrutura do Projeto
 
