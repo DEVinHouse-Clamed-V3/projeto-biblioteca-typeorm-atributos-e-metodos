@@ -142,7 +142,7 @@ Este projeto tem como objetivo desenvolver um sistema para gerenciar os diferent
  ### 4.1.3 Listar Autores por ID
 
 - **Método**: `GET`
-- **Endpoint**: `/autores:id`
+- **Endpoint**: `/autores/:id`
 - **Resposta**:
 
 		{
@@ -159,7 +159,7 @@ Este projeto tem como objetivo desenvolver um sistema para gerenciar os diferent
 ### 4.1.4 Atualizar um Autor
 
 - **Método**: `PUT`
-- **Endpoint**: `/autores:id`
+- **Endpoint**: `/autores/:id`
 - **Body**:
 
       {
@@ -189,7 +189,7 @@ Este projeto tem como objetivo desenvolver um sistema para gerenciar os diferent
 ### 4.1.5 Deletar um Autor
 
 - **Método**: `DELETE`
-- **Endpoint**: `/autores:id`
+- **Endpoint**: `/autores/:id`
 - **Resposta**:
 
       {
@@ -199,11 +199,102 @@ Este projeto tem como objetivo desenvolver um sistema para gerenciar os diferent
   ### 4.2 Auditório
 
   ### 4.2.1 Criar um Auditório
-  ### 4.2.2 Listar Auditórios
-  ### 4.2.3 Listar Auditório por ID
-  ### 4.2.4 Atualizar um Auditório
-  ### 4.2.5 Deletar um Auditório
+- **Método**: `POST`
+- **Endpoint**: `/auditorios`
+- **Body**:
+  
+	  {
+		"name": "Auditório Pequeno",
+		"capacity": 30,
+		"location": "Bloco E",
+		"has_projector": true,
+		"has_sound_system": true
+	  }
 
+- **Resposta**:
+
+	  {
+		"name": "Auditório Pequeno",
+		"capacity": 30,
+		"location": "Bloco E",
+		"has_projector": true,
+		"has_sound_system": true,
+		"created_at": "2025-01-05T21:14:13.283Z",
+		"updated_at": "2025-01-05T21:14:13.283Z",
+		"id": 19
+	  }
+  
+  ### 4.2.2 Listar Auditórios
+- **Método**: `GET`
+- **Endpoint**: `/auditorios`
+- **Resposta**:
+
+	  [
+		{
+			"id": 18,
+			"name": "Auditório Grande",
+			"capacity": 75,
+			"location": "Bloco D",
+			"has_projector": true,
+			"has_sound_system": true,
+			"created_at": "2025-01-05T21:00:28.739Z",
+			"updated_at": "2025-01-05T21:01:35.206Z"
+		},
+		{
+			"id": 19,
+			"name": "Auditório Pequeno",
+			"capacity": 30,
+			"location": "Bloco E",
+			"has_projector": true,
+			"has_sound_system": true,
+			"created_at": "2025-01-05T21:14:13.283Z",
+			"updated_at": "2025-01-05T21:14:13.283Z"
+		}
+	  ]
+  ### 4.2.3 Listar Auditório por ID
+- **Método**: `GET`
+- **Endpoint**: `/auditorios/:id`
+- **Resposta**:
+
+	  {
+		"id": 19,
+		"name": "Auditório Pequeno",
+		"capacity": 30,
+		"location": "Bloco E",
+		"has_projector": true,
+		"has_sound_system": true,
+		"created_at": "2025-01-05T21:14:13.283Z",
+		"updated_at": "2025-01-05T21:14:13.283Z"
+	  }
+  
+  ### 4.2.4 Atualizar um Auditório
+- **Método**: `PUT`
+- **Endpoint**: `/auditorios/:id`
+- **Body**:
+
+	  {
+		"capacity": 75,
+		"location": "Bloco A"
+	  }
+
+- **Resposta**:
+
+	  {
+		"id": 19,
+		"capacity": 75,
+		"location": "Bloco A",
+		"created_at": "2025-01-05T21:14:13.283Z",
+		"updated_at": "2025-01-05T21:15:13.547Z"
+	  }
+  
+  ### 4.2.5 Deletar um Auditório
+- **Método**: `DELETE`
+- **Endpoint**: `/auditorios/:id`
+- **Resposta**:
+
+      {
+	      "message": "Auditório deletado com sucesso"
+      }
 ---
 
 ## 5. Estrutura do Projeto
@@ -248,7 +339,7 @@ Este projeto tem como objetivo desenvolver um sistema para gerenciar os diferent
       
   - Laís Becker:
 
-        -
+        https://drive.google.com/file/d/1LLkLMxK3uwTuurRBeOL-G22gSszb8DvZ/view?usp=sharing
     
   - Lucas Benkendorf:
 
