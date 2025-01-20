@@ -13,7 +13,7 @@ export const AppDataSource = new DataSource({
     username: "postgres",
     password: "admin",
     database: "biblioteca",
-    synchronize: true,
+    synchronize: false,
     logging: true,
     entities: [Livro, Auditorio, Leitor, Autor],
     migrations: ["src/database/migrations/*.ts"]
