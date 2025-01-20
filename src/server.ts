@@ -9,6 +9,7 @@ import auditorioRoutes from "./routes/auditorio.routes";
 import autorRoutes from "./routes/autor.routes";
 import leitorRoutes from "./routes/leitor.routes";
 
+
 const app = express();
 
 app.use(cors());
@@ -19,6 +20,7 @@ app.use("/livros", livroRoutes);
 app.use("/auditorios", auditorioRoutes);
 app.use("/autores", autorRoutes);
 app.use("/leitores", leitorRoutes);
+
 
 AppDataSource.initialize()
   .then(async () => {
