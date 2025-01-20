@@ -19,6 +19,9 @@ livroRouter.post("/", async (req, res) => {
         livro.language = language;
 
         const savedLivro = await AppDataSource.manager.save(livro);
+        if (!title || !isbn) {
+            res.status(400).json({ message: "Campos obrigatórios não foram preenchidos" });
+        }
         res.status(201).json(savedLivro);
     } catch (error) {
         console.error(error);
@@ -30,6 +33,9 @@ livroRouter.post("/", async (req, res) => {
 livroRouter.get("/", async (_, res) => {
     try {
         const livros = await AppDataSource.manager.find(Livro);
+        if (livros.length == 0) {
+            return res.status(404).json({ message: "Nenhum livro foi cadastrado" });
+        }
         res.status(200).json(livros);
     } catch (error) {
         console.error(error);
