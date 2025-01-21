@@ -1,3 +1,4 @@
+
 import "reflect-metadata"
 import { DataSource } from "typeorm"
 
@@ -18,3 +19,4 @@ export const AppDataSource = new DataSource({
     entities: [Livro, Auditorio, Leitor, Autor],
     migrations: ["src/database/migrations/*.ts"]
 })
+

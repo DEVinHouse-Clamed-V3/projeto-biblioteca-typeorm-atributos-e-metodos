@@ -1,3 +1,4 @@
+
 import {
     Entity,
     Column,
@@ -34,3 +35,4 @@ class Autor {
   }
 
   export default Autor;
+

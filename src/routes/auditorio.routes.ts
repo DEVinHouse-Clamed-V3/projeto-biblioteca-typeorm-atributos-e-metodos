@@ -1,3 +1,4 @@
+
 import { Router } from 'express';
 import { AppDataSource } from '../database/data-source';
 import Auditorio from '../entities/Auditorio';
@@ -109,5 +110,6 @@ auditorioRoutes.delete('/:id', async (request, response) => {
         response.status(500).json({error: 'Erro ao deletar auditório'})
     }
 })
+
 
 export default auditorioRoutes;

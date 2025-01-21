@@ -1,3 +1,4 @@
+
 import { Router } from 'express';
 import  Autor  from '../entities/Autor';
 import { AppDataSource } from '../database/data-source';
@@ -100,4 +101,5 @@ autorRoutes.get('/:id', async (req, res) => {
     }
   });
   
+
 export default autorRoutes;

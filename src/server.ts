@@ -1,3 +1,4 @@
+
 import "reflect-metadata";
 import express from "express";
 import cors from "cors";
@@ -30,3 +31,4 @@ AppDataSource.initialize()
     });
   })
   .catch(() => console.log("Erro ao conectar com o banco de dados"));
+
