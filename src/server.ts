@@ -1,3 +1,4 @@
+
 import "reflect-metadata";
 import express from "express";
 import cors from "cors";
@@ -8,6 +9,7 @@ import livroRoutes from "./routes/livro.routes";
 import auditorioRoutes from "./routes/auditorio.routes";
 import autorRoutes from "./routes/autor.routes";
 import leitorRoutes from "./routes/leitor.routes";
+
 
 const app = express();
 
@@ -20,6 +22,7 @@ app.use("/auditorios", auditorioRoutes);
 app.use("/autores", autorRoutes);
 app.use("/leitores", leitorRoutes);
 
+
 AppDataSource.initialize()
   .then(async () => {
     console.log("Sua conexão com banco de dados está ok");
@@ -28,3 +31,4 @@ AppDataSource.initialize()
     });
   })
   .catch(() => console.log("Erro ao conectar com o banco de dados"));
+
